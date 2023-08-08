@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:test/DealsPage.dart';
 
 class Party_Land_Page extends StatelessWidget {
   final String username;
@@ -255,11 +256,16 @@ class Party_Land_Page extends StatelessWidget {
                 ],
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
-              Column(
-                children: [
-                  Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
-                  Text('Deals'),
-                ],
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DealsPage()));
+                },
+                child: Column(
+                  children: [
+                    Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Text('Deals'),
+                  ],
+                ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
               Column(
