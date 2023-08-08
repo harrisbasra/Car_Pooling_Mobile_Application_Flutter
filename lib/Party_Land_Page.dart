@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:test/DealsPage.dart';
+import 'package:test/Profile_View.dart';
+import 'package:test/Switch_Confirmation.dart';
 
 class Party_Land_Page extends StatelessWidget {
   final String username;
@@ -21,9 +23,14 @@ class Party_Land_Page extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 25, right: 25),
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/user.png'),
-                    radius: 25,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile_View()));
+                    },
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/user.png'),
+                      radius: 25,
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -268,23 +275,28 @@ class Party_Land_Page extends StatelessWidget {
                 ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
-              Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                     // color: Color.fromRGBO(10, 77, 104, 1),
-                    ),
-                    child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
+                },
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                       // color: Color.fromRGBO(10, 77, 104, 1),
+                      ),
+                      child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
 
-                    // Icon(
-                    //   Icons.drive_eta,
-                    //   size: 30,
-                    //   color: Colors.white,
-                    // ),
-                  ),
-                  Text('Driver mode', textAlign: TextAlign.center,),
-                ],
+                      // Icon(
+                      //   Icons.drive_eta,
+                      //   size: 30,
+                      //   color: Colors.white,
+                      // ),
+                    ),
+                    Text('Driver mode', textAlign: TextAlign.center,),
+                  ],
+                ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
               Column(
