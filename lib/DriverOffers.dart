@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'ChatPage.dart';
 import 'DealsPage.dart';
 import 'Switch_Confirmation.dart';
 
@@ -110,6 +111,7 @@ class DriverPage extends StatelessWidget {
                   minimumSize: Size(double.infinity, 45),
                 ),
                 onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
                 },
                 child: Text(
                   'Proceed',

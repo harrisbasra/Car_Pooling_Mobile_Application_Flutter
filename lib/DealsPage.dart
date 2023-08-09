@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test/ChatPage.dart';
 
 
 class DealsPage extends StatelessWidget {
@@ -270,14 +271,19 @@ class DealsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 5,),
-                    Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Text Driver', textAlign: TextAlign.center, ),
-                  ],
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+                      Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Text('Text Driver', textAlign: TextAlign.center, ),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 Column(

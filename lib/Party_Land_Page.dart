@@ -2,13 +2,16 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:test/BookingAccepted.dart';
+import 'package:test/CurrentRide.dart';
 import 'package:test/DealsPage.dart';
 import 'package:test/Profile_View.dart';
 import 'package:test/Switch_Confirmation.dart';
 
 
 import 'Book_RideP1.dart';
+import 'ChatPage.dart';
 import 'DriverArrived.dart';
+import 'Wallet.dart';
 
 class Party_Land_Page extends StatelessWidget {
   final String username;
@@ -146,6 +149,29 @@ class Party_Land_Page extends StatelessWidget {
               ),
             ),
             Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromRGBO(10, 77, 104, 1),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  minimumSize: Size(double.infinity, 45),
+                ),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> CurrentRide()));
+                },
+                child: Text(
+                  'View Current Ride',
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 255, 202, 1),
+                    fontSize: 16.0,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
               padding: EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -258,14 +284,19 @@ class Party_Land_Page extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
               Expanded(flex: 1, child: SizedBox(width: 10,)),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 5,),
-                  Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                  Text('Text Driver', textAlign: TextAlign.center, ),
-                ],
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 5,),
+                    Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Text('Text Driver', textAlign: TextAlign.center, ),
+                  ],
+                ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
               InkWell(
@@ -304,11 +335,16 @@ class Party_Land_Page extends StatelessWidget {
                 ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
-              Column(
-                children: [
-                  Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
-                  Text('Wallet'),
-                ],
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
+                },
+                child: Column(
+                  children: [
+                    Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Text('Wallet'),
+                  ],
+                ),
               ),
               Expanded(flex: 2, child: SizedBox(width: 10,)),
               Column(
