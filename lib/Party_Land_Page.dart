@@ -6,6 +6,8 @@ import 'package:test/DealsPage.dart';
 import 'package:test/Profile_View.dart';
 import 'package:test/Switch_Confirmation.dart';
 
+
+import 'Book_RideP1.dart';
 import 'DriverArrived.dart';
 
 class Party_Land_Page extends StatelessWidget {
@@ -118,7 +120,7 @@ class Party_Land_Page extends StatelessWidget {
                   Image.asset('assets/images/dance.png', scale: 1.2,),
                   SizedBox(height: 1),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    padding:  EdgeInsets.only(left: 10, right: 10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
@@ -129,7 +131,7 @@ class Party_Land_Page extends StatelessWidget {
                         minimumSize: Size(double.infinity, 65),
                       ),
                       onPressed: (){
-
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> BookRide01()));
                       },
                       child: Text(
                         'Go-To Party',
