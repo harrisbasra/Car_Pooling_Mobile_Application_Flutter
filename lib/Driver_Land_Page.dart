@@ -160,7 +160,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
           children: [
             SizedBox(height: 5,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),

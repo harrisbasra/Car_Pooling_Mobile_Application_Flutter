@@ -272,7 +272,7 @@ class Party_Land_Page extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -281,7 +281,7 @@ class Party_Land_Page extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
               Expanded(flex: 1, child: SizedBox(width: 10,)),
               InkWell(
@@ -322,7 +322,7 @@ class Party_Land_Page extends StatelessWidget {
                         shape: BoxShape.circle,
                        // color: Color.fromRGBO(10, 77, 104, 1),
                       ),
-                      child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
+                      child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
 
                       // Icon(
                       //   Icons.drive_eta,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'ChatPage.dart';
 import 'DealsPage.dart';
 import 'Switch_Confirmation.dart';
+import 'Wallet.dart';
 
 class DriverCards extends StatefulWidget {
   final String driverName;
@@ -128,7 +129,7 @@ class DriverPage extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -137,17 +138,22 @@ class DriverPage extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 5,),
-                    Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Text Driver', textAlign: TextAlign.center, ),
-                  ],
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+                      Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Text('Text Driver', textAlign: TextAlign.center, ),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
@@ -173,7 +179,7 @@ class DriverPage extends StatelessWidget {
                             shape: BoxShape.circle,
                             // color: Color.fromRGBO(10, 77, 104, 1),
                           ),
-                          child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
+                          child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
 
                         // Icon(
                         //   Icons.drive_eta,
@@ -186,11 +192,16 @@ class DriverPage extends StatelessWidget {
                   ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
-                Column(
-                  children: [
-                    Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Wallet'),
-                  ],
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
+                  },
+                  child: Column(
+                    children: [
+                      Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Text('Wallet'),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 Column(

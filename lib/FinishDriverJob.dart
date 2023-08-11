@@ -109,7 +109,7 @@ class FinishDriverJob extends StatelessWidget {
                   children: [
                     SizedBox(height: 5,),
                     Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Text Driver', textAlign: TextAlign.center, ),
+                    Text('Text Goer', textAlign: TextAlign.center, ),
                   ],
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
