@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:test/ChatPage.dart';
 import 'package:test/FinishRide.dart';
 
+import 'DealsPage.dart';
+import 'Switch_Confirmation.dart';
+import 'Wallet.dart';
+
 
 class CurrentRide extends StatelessWidget {
   @override
@@ -90,77 +94,96 @@ class CurrentRide extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar:
-      Container(
-        height: 180,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        height: 80,
+        child: Column(
+          children: [
+            SizedBox(height: 5,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(flex: 1, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+                      Image.asset("assets/images/navchat.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Text Driver', textAlign: TextAlign.center, ),
+                    ],
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  minimumSize: Size(double.infinity, 45),
                 ),
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
-                },
-                child: Text(
-                  'Chat With Driver',
-                  style: TextStyle(
-                    color: Color.fromRGBO(10, 77, 104, 1),
-                    fontSize: 16.0,
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DealsPage()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_gift.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Deals'),
+                    ],
                   ),
                 ),
-          ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
+                  },
+                  child: Column(
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            // color: Color.fromRGBO(10, 77, 104, 1),
+                          ),
+                          child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
+
+                        // Icon(
+                        //   Icons.drive_eta,
+                        //   size: 30,
+                        //   color: Colors.white,
+                        // ),
+                      ),
+                      Text('Driver mode', textAlign: TextAlign.center,),
+                    ],
+                  ),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                minimumSize: Size(double.infinity, 45),
-              ),
-              onPressed: (){
-                Navigator.pop(context);
-              },
-              child: Text(
-                'Cancel Ride',
-                style: TextStyle(
-                  color: Color.fromRGBO(10, 77, 104, 1),
-                  fontSize: 16.0,
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_wallet.png",scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Wallet'),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(10, 77, 104, 1),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                Column(
+                  children: [
+                    Image.asset("assets/images/nav_menu.png", scale: 2,),
+                    SizedBox(height: 10,),
+                    Text('Menu'),
+                  ],
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                minimumSize: Size(double.infinity, 45),
-              ),
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> FinishRide()));
-              },
-              child: Text(
-                'Finish Ride',
-                style: TextStyle(
-                  color: Color.fromRGBO(0, 255, 202, 1),
-                  fontSize: 16.0,
-                ),
-              ),
-            ),
-            ],
-          ),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+              ],),
+          ],
         ),
       ),
     );

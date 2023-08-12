@@ -152,7 +152,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -160,8 +160,8 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
           children: [
             SizedBox(height: 5,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
                 InkWell(
@@ -173,7 +173,8 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(height: 5,),
-                      Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Image.asset("assets/images/navchat.png", scale: 2,),
+                      SizedBox(height: 10,),
                       Text('Text Goer', textAlign: TextAlign.center, ),
                     ],
                   ),
@@ -185,15 +186,16 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                   },
                   child: Column(
                     children: [
-                      Icon(Icons.recent_actors, color: Color.fromRGBO(10, 77, 104, 1),),
-                      Text('Rides'),
+                      Image.asset("assets/images/nav_recent.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Recent'),
                     ],
                   ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Party_Land_Page(username: widget.username, userID: widget.userID)));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
                   },
                   child: Column(
                     children: [
@@ -202,7 +204,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                             shape: BoxShape.circle,
                             // color: Color.fromRGBO(10, 77, 104, 1),
                           ),
-                          child: Image.asset("assets/images/PartyJugs.png", height: 50, width: 50,)
+                          child: Image.asset("assets/images/PartyJugs.png", height: 55, width: 55,)
 
                         // Icon(
                         //   Icons.drive_eta,
@@ -210,18 +212,19 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                         //   color: Colors.white,
                         // ),
                       ),
-                      Text('Party Goer', textAlign: TextAlign.center,),
+                      Text('Party mode', textAlign: TextAlign.center,),
                     ],
                   ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
                   onTap: (){
-                   // Navigator.push(context, MaterialPageRoute(builder: (context)=> Driver_Wallet()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
                   },
                   child: Column(
                     children: [
-                      Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Image.asset("assets/images/nav_wallet.png",scale: 2,),
+                      SizedBox(height: 10,),
                       Text('Wallet'),
                     ],
                   ),
@@ -229,7 +232,8 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 Column(
                   children: [
-                    Icon(Icons.menu, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Image.asset("assets/images/nav_menu.png", scale: 2,),
+                    SizedBox(height: 10,),
                     Text('Menu'),
                   ],
                 ),

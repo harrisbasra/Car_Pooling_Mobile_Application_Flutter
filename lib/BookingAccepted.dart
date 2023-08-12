@@ -77,7 +77,8 @@ class BookingAccepted extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(height: 5,),
-                      Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Image.asset("assets/images/navchat.png", scale: 2,),
+                      SizedBox(height: 10,),
                       Text('Text Driver', textAlign: TextAlign.center, ),
                     ],
                   ),
@@ -89,7 +90,8 @@ class BookingAccepted extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-                      Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Image.asset("assets/images/nav_gift.png", scale: 2,),
+                      SizedBox(height: 10,),
                       Text('Deals'),
                     ],
                   ),
@@ -125,7 +127,8 @@ class BookingAccepted extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-                      Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Image.asset("assets/images/nav_wallet.png",scale: 2,),
+                      SizedBox(height: 10,),
                       Text('Wallet'),
                     ],
                   ),
@@ -133,7 +136,8 @@ class BookingAccepted extends StatelessWidget {
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 Column(
                   children: [
-                    Icon(Icons.menu, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Image.asset("assets/images/nav_menu.png", scale: 2,),
+                    SizedBox(height: 10,),
                     Text('Menu'),
                   ],
                 ),

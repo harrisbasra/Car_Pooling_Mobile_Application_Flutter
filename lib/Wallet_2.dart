@@ -201,7 +201,7 @@ class Driver_Wallet extends StatelessWidget {
                     children: [
                       SizedBox(height: 5,),
                       Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                      Text('Text Driver', textAlign: TextAlign.center, ),
+                      Text('Text Goer', textAlign: TextAlign.center, ),
                     ],
                   ),
                 ),
@@ -213,7 +213,7 @@ class Driver_Wallet extends StatelessWidget {
                   child: Column(
                     children: [
                       Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
-                      Text('Deals'),
+                      Text('Recent'),
                     ],
                   ),
                 ),

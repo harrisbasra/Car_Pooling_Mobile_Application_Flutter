@@ -283,78 +283,82 @@ class Party_Land_Page extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-              Expanded(flex: 1, child: SizedBox(width: 10,)),
-              InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 5,),
-                    Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Text Driver', textAlign: TextAlign.center, ),
-                  ],
+                Expanded(flex: 1, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+                      Image.asset("assets/images/navchat.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Text Driver', textAlign: TextAlign.center, ),
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(flex: 2, child: SizedBox(width: 10,)),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DealsPage()));
-                },
-                child: Column(
-                  children: [
-                    Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Deals'),
-                  ],
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DealsPage()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_gift.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Deals'),
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(flex: 2, child: SizedBox(width: 10,)),
-              InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
-                },
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                       // color: Color.fromRGBO(10, 77, 104, 1),
-                      ),
-                      child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
+                  },
+                  child: Column(
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            // color: Color.fromRGBO(10, 77, 104, 1),
+                          ),
+                          child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
 
-                      // Icon(
-                      //   Icons.drive_eta,
-                      //   size: 30,
-                      //   color: Colors.white,
-                      // ),
-                    ),
-                    Text('Driver mode', textAlign: TextAlign.center,),
-                  ],
+                        // Icon(
+                        //   Icons.drive_eta,
+                        //   size: 30,
+                        //   color: Colors.white,
+                        // ),
+                      ),
+                      Text('Driver mode', textAlign: TextAlign.center,),
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(flex: 2, child: SizedBox(width: 10,)),
-              InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
-                },
-                child: Column(
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_wallet.png",scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Wallet'),
+                    ],
+                  ),
+                ),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                Column(
                   children: [
-                    Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Wallet'),
+                    Image.asset("assets/images/nav_menu.png", scale: 2,),
+                    SizedBox(height: 10,),
+                    Text('Menu'),
                   ],
                 ),
-              ),
-              Expanded(flex: 2, child: SizedBox(width: 10,)),
-              Column(
-                children: [
-                  Icon(Icons.menu, color: Color.fromRGBO(10, 77, 104, 1),),
-                  Text('Menu'),
-                ],
-              ),
-              Expanded(flex: 2, child: SizedBox(width: 10,)),
-            ],),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+              ],),
           ],
         ),
       ),
