@@ -20,11 +20,26 @@ class _BookRide01State extends State<BookRide01> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+
         title: Text(
           'Book Ride',
+          textAlign: TextAlign.center,
           style: TextStyle(color: Colors.white),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -228,20 +243,25 @@ class _BookRide01State extends State<BookRide01> {
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(color: Colors.blueGrey, width: 1),
                       ),
-                      child: Slider(
-                        value: _sliderValue,
-                        onChanged: (newValue) {
-                          setState(() {
-                            _sliderValue = newValue;
-                          });
-                        },
-                        min: 0,
-                        max: _options.length - 1,
-                        divisions: _options.length - 1,
-                        label: _options[_sliderValue.round()],
-                        activeColor: Color.fromRGBO(0, 0, 0, 0.1),
-                        inactiveColor: Color.fromRGBO(0, 0, 0, 0.1),
-                        thumbColor: Color.fromRGBO(10, 77, 104, 1),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 5, bottom: 5),
+                        child: Row(
+                          children: [
+                            Text('Automatic Price Calculation <<< ', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w300),),
+                            Container(
+                              width: 35,
+                              height: 35,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.white,
+                                border: Border.all(
+                                  color: Color.fromRGBO(8, 131, 149, 1),
+                                )
+                              ),
+                            ),
+                            Text(' >>> Let Driver suggest a price', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w300),),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(height: 10),

@@ -86,11 +86,26 @@ class DriverPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+
         title: Text(
           'Available Driver',
+          textAlign: TextAlign.center,
           style: TextStyle(color: Colors.white),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

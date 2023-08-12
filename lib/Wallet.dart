@@ -11,14 +11,26 @@ class Wallet extends StatelessWidget {
     String username = "Jon Doe";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
-        title: Text('Wallet', textAlign: TextAlign.center, style: TextStyle(color: Colors.white),),
+
+        title: Text(
+          'Wallet',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -29,23 +41,26 @@ class Wallet extends StatelessWidget {
               Center(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 5, top: 25, right: 25),
-                  child: Text.rich(
-                    TextSpan(
-                      text: 'Hello, ',
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Color.fromRGBO(10, 78, 105, 1),
-                        fontWeight: FontWeight.bold,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: ' $username',
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.normal,
-                          ),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text.rich(
+                      TextSpan(
+                        text: 'Hello',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Color.fromRGBO(10, 78, 105, 1),
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: ' $username',
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -80,8 +95,12 @@ class Wallet extends StatelessWidget {
                     child: Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: Colors.grey.shade400,
+                          width: 1,
+                        )
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -105,8 +124,12 @@ class Wallet extends StatelessWidget {
                     child: Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey.shade400,
+                            width: 1,
+                          )
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -128,7 +151,7 @@ class Wallet extends StatelessWidget {
               ),
               SizedBox(height: 25,),
               Text(
-                'Past Rides: ',
+                'Transactions: ',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -137,11 +160,11 @@ class Wallet extends StatelessWidget {
               ),
               SizedBox(height: 20,),
               Container(
-                height: 300,
+                height: 350,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Colors.black,
+                    color: Colors.grey.shade400,
                     width: 3,
                   )
                 ),
@@ -165,7 +188,7 @@ class Wallet extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -174,7 +197,7 @@ class Wallet extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
                 InkWell(
@@ -215,7 +238,7 @@ class Wallet extends StatelessWidget {
                             shape: BoxShape.circle,
                             // color: Color.fromRGBO(10, 77, 104, 1),
                           ),
-                          child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
+                          child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
 
                         // Icon(
                         //   Icons.drive_eta,
@@ -276,54 +299,40 @@ class _RideCardsState extends State<RideCards> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 3,
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey.shade400,
+          width: 1,
+        ),
+      ),
       child: ListTile(
         leading: Icon(Icons.person),
         title: Row(
           children: [
             Text(widget.driverName),
             Expanded(child: SizedBox(width: 10)),
+            Text(' ${widget.state}'),
             GestureDetector(
               onTap: () {
 
               },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(
-                    color: Colors.black, // Border color
-                    width: 1, // Border width
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 8.0, right: 8.0, top: 2, bottom: 2),
-                  child: Text(
-                    '\$${widget.offeredPrice.toStringAsFixed(2)}',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 8.0, right: 8.0, top: 2, bottom: 2),
+                child: Text(
+                  '\$${widget.offeredPrice.toStringAsFixed(2)}',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
           ],
         ),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.star, color: Colors.yellow),
-                Text(' ${widget.state}'),
-              ],
-            ),
-          ],
-        ),
+
       ),
     );
   }

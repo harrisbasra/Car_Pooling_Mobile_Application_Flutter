@@ -10,6 +10,7 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
+        height: 1000,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/background.png'),

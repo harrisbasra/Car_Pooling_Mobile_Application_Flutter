@@ -10,14 +10,26 @@ class RideRatings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
-        title: Text('Rides Ratings', textAlign: TextAlign.center, style: TextStyle(color: Colors.white),),
+
+        title: Text(
+          'Rides Ratings',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: ListView(
         children: [
@@ -162,65 +174,87 @@ class RatingCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.all(10.0),
-      child: Column(
-        children: [
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          border: Border.all(
+            color: Colors.grey.shade400,
+            width: 1,
+          )
+        ),
+        child: Column(
+          children: [
 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Icon(Icons.star, color: Colors.amber,),
-                Icon(Icons.star, color: Colors.amber,),
-                Icon(Icons.star, color: Colors.amber,),
-                Icon(Icons.star, color: Colors.amber,),
-                Icon(Icons.star, color: Colors.amber,),
-                SizedBox(width: 5,),
-                Text(
-                  '$driverRatings', // Driver's ratings value
-                  style: TextStyle(
-                    color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(Icons.star, color: Colors.amber,),
+                  Icon(Icons.star, color: Colors.amber,),
+                  Icon(Icons.star, color: Colors.amber,),
+                  Icon(Icons.star, color: Colors.amber,),
+                  Icon(Icons.star, color: Colors.amber,),
+                  SizedBox(width: 5,),
+                  Text(
+                    '$driverRatings Stars', // Driver's ratings value
+                    style: TextStyle(
+                      color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                    ),
                   ),
-                ),
-                Expanded(child: SizedBox(width: 5,),),
-                Text(
-                  '$price', // Price value
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
-                    fontWeight: FontWeight.bold,
+                  Expanded(child: SizedBox(width: 5,),),
+                  Text(
+                    '$price', // Price value
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          SizedBox(height: 25,),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '$driverName',
-                  // Driver's name value
-                  style: TextStyle(
-                    fontSize: 25,
+            SizedBox(height: 25,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 5),
+                    child: InkWell(
+                      onTap: (){
 
-                    color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/images/user.png'),
+                        radius: 10,
+                      ),
+                    ),
                   ),
-                ),
-                Text(
-                  '$timeOfRide', // Time of ride value
-                  style: TextStyle(
-                    color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                  Text(
+                    '$driverName',
+                    // Driver's name value
+                    style: TextStyle(
+                      fontSize: 25,
+
+                      color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                    ),
                   ),
-                ),
-              ],
+                  Expanded(child: SizedBox(width: 10,),),
+                  Text(
+                    '$timeOfRide', // Time of ride value
+                    style: TextStyle(
+                      color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

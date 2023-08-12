@@ -5,18 +5,26 @@ class Edit_Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+
         title: Text(
           'Edit Profile',
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: Container(
         decoration: BoxDecoration(

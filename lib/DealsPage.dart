@@ -10,14 +10,26 @@ class DealsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
-        title: Text('Deals', textAlign: TextAlign.center, style: TextStyle(color: Colors.white),),
+
+        title: Text(
+          'Deals',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -32,21 +44,29 @@ class DealsPage extends StatelessWidget {
                     child: Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey.shade400,
+                            width: 1,
+                          )
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          SizedBox(width: 5,),
                           Text(
                             'Drinks',
                             style: TextStyle(
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
+                                fontWeight: FontWeight.w600
                             ),
                           ),
-                          SizedBox(width: 10),
+                          Expanded(child: SizedBox(width: 10)),
                           Image.asset("assets/images/bear.png", scale: 1.8,),
+                          SizedBox(width: 5,),
+
                         ],
                       ),
                     ),
@@ -55,10 +75,14 @@ class DealsPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                     height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey.shade400,
+                            width: 1,
+                          )
+                      ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -67,6 +91,7 @@ class DealsPage extends StatelessWidget {
                           style: TextStyle(
                             color: Color.fromRGBO(10, 77, 104, 1),
                             fontSize: 15,
+                              fontWeight: FontWeight.w600
                           ),
                         ),
                         SizedBox(width: 10),
@@ -85,21 +110,30 @@ class DealsPage extends StatelessWidget {
                     child: Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey.shade400,
+                            width: 1,
+                          )
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+
+                          SizedBox(width: 5,),
                           Text(
                             'Free Rides',
                             style: TextStyle(
-                              color: Color.fromRGBO(10, 77, 104, 1),
-                              fontSize: 15,
+                                color: Color.fromRGBO(10, 77, 104, 1),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600
                             ),
                           ),
-                          SizedBox(width: 10),
+                          Expanded(child: SizedBox(width: 10)),
                           Image.asset("assets/images/party.png", scale: 1.8,),
+
+                          SizedBox(width: 5,),
                         ],
                       ),
                     ),
@@ -109,8 +143,12 @@ class DealsPage extends StatelessWidget {
                     child: Container(
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey.shade400,
+                            width: 1,
+                          )
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -120,6 +158,7 @@ class DealsPage extends StatelessWidget {
                             style: TextStyle(
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
+                              fontWeight: FontWeight.w600
                             ),
                           ),
                           SizedBox(width: 10),
@@ -134,13 +173,13 @@ class DealsPage extends StatelessWidget {
               Card(
                 elevation: 10,
                 child: Container(
-                  height: 180,
+                  height: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
-                      colors: [Colors.grey.shade300, Colors.white],
+                      colors: [Colors.white, Colors.white, Colors.grey.shade400],
                     ),
                   ),
                   child: Row(
@@ -175,8 +214,8 @@ class DealsPage extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Container(
-                          width: 160, // Adjust the width as needed
-                          height: 180, // Adjust the height as needed
+                          width: 150, // Adjust the width as needed
+                          height: 200, // Adjust the height as needed
                           child: Stack(
                             children: [
                               Positioned.fill(

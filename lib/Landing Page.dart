@@ -79,7 +79,10 @@ class Landing_Page extends StatelessWidget {
               children: [
                 Checkbox(value: _isChecked, onChanged: (bool){
                     _isChecked = true;
-                }, checkColor: Colors.white,),
+                },
+                  activeColor: Colors.white,
+                 checkColor: Colors.black,
+                ),
                 Text(
                   "Remember me",
                   style: TextStyle(color: Colors.white), // Set text color to white
@@ -158,14 +161,26 @@ class Landing_Page extends StatelessWidget {
                 ),
                 Text("German", style: TextStyle(color: Colors.white),),
                 Spacer(),
-                Radio<bool>(
-                  value: true,
-                  groupValue: _selectedLanguage,
-                  onChanged: (bool? value) {
+                Container(
+                  width: 16,
+                  height: 16,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(
+                      color: Color.fromRGBO(255, 255, 255, 0.9),
+                      width: 2,
+                    ),
+                  ),
+                  child: Radio<bool>(
+                    value: true,
+                    groupValue: _selectedLanguage,
+                    onChanged: (bool? value) {
 
-                  },
-                  activeColor: Color.fromRGBO(10, 77, 204, 1),
+                    },
+                    activeColor: Color.fromRGBO(10, 77, 104, 1),
+                  ),
                 ),
+                SizedBox(width: 2,),
                 Text("English", style: TextStyle(color: Colors.white),),
               ],
             ),

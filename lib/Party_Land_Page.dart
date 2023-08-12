@@ -30,7 +30,7 @@ class Party_Land_Page extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 25, top: 25, right: 25),
+                  padding: const EdgeInsets.only(left: 25, top: 25,),
                   child: InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile_View()));
@@ -41,22 +41,21 @@ class Party_Land_Page extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
                 Padding(
                   padding: const EdgeInsets.only(left: 25, top: 25, right: 25),
                   child: Text.rich(
                     TextSpan(
-                      text: 'Hello, ',
+                      text: 'Hello, \n',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                         color: Color.fromRGBO(10, 78, 105, 1),
                         fontWeight: FontWeight.bold,
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                          text: ' $username',
+                          text: '$username',
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 30,
                             fontWeight: FontWeight.normal,
                           ),
                         ),
@@ -185,82 +184,83 @@ class Party_Land_Page extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Card(
-                    elevation: 10,
-                    child: Container(
-                      height: 180,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [Colors.grey.shade300, Colors.white],
+                  Container(
+                    height: 180,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Colors.grey.shade400,
+                        width: 1,
+                      ),
+                      gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [Colors.white, Colors.white, Colors.grey.shade300],
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Get up to \n50% off',
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Color.fromRGBO(10, 77, 104, 1),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'on party \ntickets',
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Color.fromRGBO(10, 77, 104, 1),
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 20),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Get up to \n50% off',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      color: Color.fromRGBO(10, 77, 104, 1),
-                                      fontWeight: FontWeight.bold,
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            width: 160, // Adjust the width as needed
+                            height: 180, // Adjust the height as needed
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.only(topRight: Radius.circular(10),bottomRight: Radius.circular(10), ),
+                                    child: Image.asset(
+                                      'assets/images/beach.png',
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
-                                  Text(
-                                    'on party \ntickets',
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      color: Color.fromRGBO(10, 77, 104, 1),
-                                      fontWeight: FontWeight.w300,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(10),
+                                      bottomRight: Radius.circular(10),
+                                    ),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [Colors.grey.shade300,Colors.transparent, Colors.transparent],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: Container(
-                              width: 160, // Adjust the width as needed
-                              height: 180, // Adjust the height as needed
-                              child: Stack(
-                                children: [
-                                  Positioned.fill(
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(topRight: Radius.circular(10),bottomRight: Radius.circular(10), ),
-                                      child: Image.asset(
-                                        'assets/images/beach.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(10),
-                                        bottomRight: Radius.circular(10),
-                                      ),
-                                      gradient: LinearGradient(
-                                        begin: Alignment.centerLeft,
-                                        end: Alignment.centerRight,
-                                        colors: [Colors.grey.shade300,Colors.transparent, Colors.transparent],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   )
                 ],

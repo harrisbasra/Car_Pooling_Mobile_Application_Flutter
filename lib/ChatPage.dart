@@ -5,9 +5,28 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Chat with Driver'),
+      appBar: AppBar(
+
+        title: Text(
+          'Chat With Driver',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
+      ),
         body: Column(
           children: [
             Expanded(

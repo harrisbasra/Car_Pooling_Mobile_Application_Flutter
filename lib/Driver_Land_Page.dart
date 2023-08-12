@@ -217,7 +217,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Driver_Wallet()));
+                   // Navigator.push(context, MaterialPageRoute(builder: (context)=> Driver_Wallet()));
                   },
                   child: Column(
                     children: [

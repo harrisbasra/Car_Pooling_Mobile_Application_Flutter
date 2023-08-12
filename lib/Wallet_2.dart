@@ -4,6 +4,7 @@ import 'package:test/Driver_Land_Page.dart';
 import 'DealsPage.dart';
 import 'Landing Page.dart';
 import 'Switch_Confirmation.dart';
+import 'Wallet.dart';
 
 
 class Driver_Wallet extends StatelessWidget {
@@ -12,14 +13,26 @@ class Driver_Wallet extends StatelessWidget {
     String username = "Jon Doe";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
-        title: Text('Wallet', textAlign: TextAlign.center, style: TextStyle(color: Colors.white),),
+
+        title: Text(
+          'Wallet',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+        ),
+        backgroundColor: Color.fromRGBO(10, 77, 104, 1),
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -166,7 +179,7 @@ class Driver_Wallet extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -175,7 +188,7 @@ class Driver_Wallet extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
                 InkWell(
@@ -188,7 +201,7 @@ class Driver_Wallet extends StatelessWidget {
                     children: [
                       SizedBox(height: 5,),
                       Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                      Text('Text Goer', textAlign: TextAlign.center, ),
+                      Text('Text Driver', textAlign: TextAlign.center, ),
                     ],
                   ),
                 ),
@@ -199,15 +212,15 @@ class Driver_Wallet extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-                      Icon(Icons.recent_actors, color: Color.fromRGBO(10, 77, 104, 1),),
-                      Text('Rides'),
+                      Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
+                      Text('Deals'),
                     ],
                   ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Landing_Page()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
                   },
                   child: Column(
                     children: [
@@ -216,7 +229,7 @@ class Driver_Wallet extends StatelessWidget {
                             shape: BoxShape.circle,
                             // color: Color.fromRGBO(10, 77, 104, 1),
                           ),
-                          child: Image.asset("assets/images/PartyJugs.png", height: 50, width: 50,)
+                          child: Image.asset("assets/images/steering.png", height: 55, width: 55,)
 
                         // Icon(
                         //   Icons.drive_eta,
@@ -224,14 +237,14 @@ class Driver_Wallet extends StatelessWidget {
                         //   color: Colors.white,
                         // ),
                       ),
-                      Text('Party Goer', textAlign: TextAlign.center,),
+                      Text('Driver mode', textAlign: TextAlign.center,),
                     ],
                   ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Driver_Wallet()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
                   },
                   child: Column(
                     children: [
@@ -252,6 +265,7 @@ class Driver_Wallet extends StatelessWidget {
           ],
         ),
       ),
+
     );
   }
 }
