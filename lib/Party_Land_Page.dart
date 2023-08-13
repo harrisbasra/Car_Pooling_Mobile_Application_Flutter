@@ -46,7 +46,7 @@ class Party_Land_Page extends StatelessWidget {
                   child: Text.rich(
                     TextSpan(
                       text: 'Hello, \n',
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         fontSize: 30,
                         color: Color.fromRGBO(10, 78, 105, 1),
                         fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class Party_Land_Page extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                           text: '$username',
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: 'UberMove',
                             fontSize: 30,
                             fontWeight: FontWeight.normal,
                           ),
@@ -83,7 +83,7 @@ class Party_Land_Page extends StatelessWidget {
                   children: [
                     Text(
                       'wanna earn money with us?',
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         fontSize: 25,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -92,7 +92,7 @@ class Party_Land_Page extends StatelessWidget {
                     SizedBox(height: 5,),
                     Text(
                       'switch to Driver mode',
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         fontSize: 20,
                         color: Colors.white,
                         fontWeight: FontWeight.normal,
@@ -137,7 +137,7 @@ class Party_Land_Page extends StatelessWidget {
                       },
                       child: Text(
                         'Go-To Party',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           color: Color.fromRGBO(10, 77, 104, 1),
                           fontSize: 25,
                         ),
@@ -163,7 +163,7 @@ class Party_Land_Page extends StatelessWidget {
                 },
                 child: Text(
                   'View Current Ride',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
                   ),
@@ -177,7 +177,7 @@ class Party_Land_Page extends StatelessWidget {
                 children: [
                   Text(
                     ' Deals',
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                       color: Color.fromRGBO(10, 77, 104, 1),
@@ -209,7 +209,7 @@ class Party_Land_Page extends StatelessWidget {
                               children: [
                                 Text(
                                   'Get up to \n50% off',
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: 'UberMove',
                                     fontSize: 25,
                                     color: Color.fromRGBO(10, 77, 104, 1),
                                     fontWeight: FontWeight.bold,
@@ -217,7 +217,7 @@ class Party_Land_Page extends StatelessWidget {
                                 ),
                                 Text(
                                   'on party \ntickets',
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: 'UberMove',
                                     fontSize: 25,
                                     color: Color.fromRGBO(10, 77, 104, 1),
                                     fontWeight: FontWeight.w300,
@@ -230,7 +230,7 @@ class Party_Land_Page extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerRight,
                           child: Container(
-                            width: 160, // Adjust the width as needed
+                            width: 180, // Adjust the width as needed
                             height: 180, // Adjust the height as needed
                             child: Stack(
                               children: [

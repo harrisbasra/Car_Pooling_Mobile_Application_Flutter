@@ -12,12 +12,12 @@ class DealsPage extends StatelessWidget {
       appBar: AppBar(
 
         title: Text(
-          'Deals',
+          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDeals',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -57,7 +57,7 @@ class DealsPage extends StatelessWidget {
                           SizedBox(width: 5,),
                           Text(
                             'Drinks',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
                                 fontWeight: FontWeight.w600
@@ -88,7 +88,7 @@ class DealsPage extends StatelessWidget {
                       children: [
                         Text(
                           'Party Tickets',
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: 'UberMove',
                             color: Color.fromRGBO(10, 77, 104, 1),
                             fontSize: 15,
                               fontWeight: FontWeight.w600
@@ -124,7 +124,7 @@ class DealsPage extends StatelessWidget {
                           SizedBox(width: 5,),
                           Text(
                             'Free Rides',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                                 color: Color.fromRGBO(10, 77, 104, 1),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600
@@ -155,7 +155,7 @@ class DealsPage extends StatelessWidget {
                         children: [
                           Text(
                             'More Deals',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
                               fontWeight: FontWeight.w600
@@ -193,7 +193,7 @@ class DealsPage extends StatelessWidget {
                             children: [
                               Text(
                                 'Get up to \n50% off',
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: 'UberMove',
                                   fontSize: 25,
                                   color: Color.fromRGBO(10, 77, 104, 1),
                                   fontWeight: FontWeight.bold,
@@ -201,7 +201,7 @@ class DealsPage extends StatelessWidget {
                               ),
                               Text(
                                 'on party \ntickets',
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: 'UberMove',
                                   fontSize: 25,
                                   color: Color.fromRGBO(10, 77, 104, 1),
                                   fontWeight: FontWeight.w300,
@@ -214,7 +214,7 @@ class DealsPage extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Container(
-                          width: 150, // Adjust the width as needed
+                          width: 170, // Adjust the width as needed
                           height: 200, // Adjust the height as needed
                           child: Stack(
                             children: [
@@ -271,7 +271,7 @@ class DealsPage extends StatelessWidget {
                     children: [
                       Text(
                         'Like to have \nsome bear?',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -288,7 +288,7 @@ class DealsPage extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 2, bottom: 2),
-                          child: Text("Learn More", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
+                          child: Text("Learn More", style: TextStyle(fontFamily: 'UberMove',color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
                         ),
                       )
                     ],

@@ -16,10 +16,10 @@ class FinishRide extends StatelessWidget {
         title: Text(
           'Ride Finished',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -43,7 +43,7 @@ class FinishRide extends StatelessWidget {
               Expanded(child: SizedBox(height: 10,)),Text(
                 "You have Reached Your Destination",
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -53,7 +53,7 @@ class FinishRide extends StatelessWidget {
               Expanded(child: SizedBox(height: 10,)),Text(
                 "How was your experience with rider?",
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontWeight: FontWeight.normal,
                   fontSize: 20,
@@ -63,7 +63,7 @@ class FinishRide extends StatelessWidget {
               TextField(
                 onTap: () {},
                 maxLines: 5,
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                 decoration: InputDecoration(
                   hintText: 'Enter Comments...',
                   filled: true,
@@ -96,7 +96,7 @@ class FinishRide extends StatelessWidget {
                 },
                 child: Text(
                   'End',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
                   ),

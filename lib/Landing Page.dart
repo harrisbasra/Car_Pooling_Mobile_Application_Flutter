@@ -30,15 +30,14 @@ class Landing_Page extends StatelessWidget {
             Text(
               "LOGIN",
               textAlign: TextAlign.center,
-              style: TextStyle( color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
             TextField(
               onTap: () {},
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
               decoration: InputDecoration(
                 hintText: 'Enter Email',
-                hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149,1),),
                 filled: true,
                 fillColor: Colors.white, // Background color
                 focusedBorder: OutlineInputBorder(
@@ -55,11 +54,10 @@ class Landing_Page extends StatelessWidget {
             SizedBox(height: 10),
             TextField(
               onTap: () {},
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
               obscureText: true,
               decoration: InputDecoration(
                 hintText: 'Enter Password',
-                hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149,1),),
                 filled: true,
                 fillColor: Colors.white, // Background color
                 focusedBorder: OutlineInputBorder(
@@ -85,7 +83,7 @@ class Landing_Page extends StatelessWidget {
                 ),
                 Text(
                   "Remember me",
-                  style: TextStyle(color: Colors.white), // Set text color to white
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.white,), // Set text color to white
                 ),
                 Spacer(),
                 TextButton(
@@ -93,7 +91,7 @@ class Landing_Page extends StatelessWidget {
                   style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all(Colors.white), // Set text color to white
                   ),
-                  child: Text("Forgot Password?"),
+                  child: Text("Forgot Password?", style: TextStyle(fontFamily: 'UberMove',),),
                 ),
               ],
             ),
@@ -115,7 +113,8 @@ class Landing_Page extends StatelessWidget {
               },
               child: Text(
                 'LOGIN',
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
+
                   color: Color.fromRGBO(0, 255, 202, 1),
                   fontSize: 16.0,
                 ),
@@ -129,7 +128,7 @@ class Landing_Page extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text("or", style: TextStyle(color: Colors.white),),
+                  child: Text("or", style: TextStyle(fontFamily: 'UberMove',color: Colors.white, ),),
                 ),
                 Expanded(
                   child: Divider(),
@@ -145,7 +144,7 @@ class Landing_Page extends StatelessWidget {
             Center(
               child: Text(
                 "Language",
-                style: TextStyle( color: Colors.white, fontSize: 18),
+                style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 18),
               ),
             ),
             SizedBox(height: 10),
@@ -159,7 +158,7 @@ class Landing_Page extends StatelessWidget {
                   },
                   activeColor: Color.fromRGBO(10, 77, 204, 1),
                 ),
-                Text("German", style: TextStyle(color: Colors.white),),
+                Text("German", style: TextStyle(fontFamily: 'UberMove',color: Colors.white),),
                 Spacer(),
                 Container(
                   width: 16,
@@ -181,7 +180,7 @@ class Landing_Page extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 2,),
-                Text("English", style: TextStyle(color: Colors.white),),
+                Text("English", style: TextStyle(fontFamily: 'UberMove',color: Colors.white),),
               ],
             ),
             SizedBox(height: 30),
@@ -198,7 +197,7 @@ class Landing_Page extends StatelessWidget {
                   child: Text(
                     "New Here? ",
                     textAlign: TextAlign.center,
-                    style: TextStyle( color: Colors.white, fontSize: 16),
+                    style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 16),
                   ),
                 ),
                 InkWell(
@@ -212,7 +211,7 @@ class Landing_Page extends StatelessWidget {
                     "Sign Up",
                     textAlign: TextAlign.center,
 
-                    style: TextStyle( color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],

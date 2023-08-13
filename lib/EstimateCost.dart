@@ -24,10 +24,10 @@ class _EstimateCostState extends State<EstimateCost> {
         title: Text(
           'Book Ride',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -48,7 +48,7 @@ class _EstimateCostState extends State<EstimateCost> {
           children: [
             Text(
               'Address',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
             Row(
@@ -60,10 +60,10 @@ class _EstimateCostState extends State<EstimateCost> {
                     children: [
                       TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           hintText: 'Pickup Address',
-                          hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w200),
+                          hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontWeight: FontWeight.w200),
                           filled: true,
                           suffixIcon: InkWell(
                               onTap: (){
@@ -88,10 +88,10 @@ class _EstimateCostState extends State<EstimateCost> {
                       SizedBox(height: 5,),
                       TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           hintText: 'Destination Address Address',
-                          hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w200),
+                          hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontWeight: FontWeight.w200),
                           filled: true,
                           suffixIcon:  InkWell(
                               onTap: (){
@@ -120,13 +120,13 @@ class _EstimateCostState extends State<EstimateCost> {
             SizedBox(height: 16),
             Text(
               'No. of People',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
             DropdownButtonFormField<String>(
               decoration: InputDecoration(
                 hintText: 'No. Of People',
-                hintStyle: TextStyle(color: Colors.black),
+                hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                 filled: true,
                 fillColor: Colors.white, // Background color
                 focusedBorder: OutlineInputBorder(
@@ -143,7 +143,7 @@ class _EstimateCostState extends State<EstimateCost> {
                   .map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: TextStyle(color: Colors.black)),
+                  child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                 );
               }).toList(),
               onChanged: (String? newValue) {},
@@ -151,13 +151,13 @@ class _EstimateCostState extends State<EstimateCost> {
             SizedBox(height: 16),
             Text(
               'Pickup Time',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10,),
             DropdownButtonFormField<String>(
               decoration: InputDecoration(
                 hintText: 'Select Hours',
-                hintStyle: TextStyle(color: Colors.black),
+                hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                 filled: true,
                 fillColor: Colors.white, // Background color
                 focusedBorder: OutlineInputBorder(
@@ -174,7 +174,7 @@ class _EstimateCostState extends State<EstimateCost> {
                   .map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: TextStyle(color: Colors.black)),
+                  child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                 );
               }).toList(),
               onChanged: (String? newValue) {},
@@ -183,7 +183,7 @@ class _EstimateCostState extends State<EstimateCost> {
             DropdownButtonFormField<String>(
               decoration: InputDecoration(
                 hintText: 'Select Minutes',
-                hintStyle: TextStyle(color: Colors.black),
+                hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                 filled: true,
                 fillColor: Colors.white, // Background color
                 focusedBorder: OutlineInputBorder(
@@ -200,7 +200,7 @@ class _EstimateCostState extends State<EstimateCost> {
                   .map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: TextStyle(color: Colors.black)),
+                  child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                 );
               }).toList(),
               onChanged: (String? newValue) {},
@@ -209,7 +209,7 @@ class _EstimateCostState extends State<EstimateCost> {
             Center(
               child: Text(
                 'Estimated Price: \$$price',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'UberMove',fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
             SizedBox(height: 40),
@@ -227,7 +227,7 @@ class _EstimateCostState extends State<EstimateCost> {
               },
               child: Text(
                 'Book Ride',
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(0, 255, 202, 1),
                   fontSize: 16.0,
                 ),

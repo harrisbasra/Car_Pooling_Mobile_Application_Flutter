@@ -34,7 +34,7 @@ class SignUpPage extends StatelessWidget {
                   Text(
                     'SIGN UP',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontFamily: 'UberMove',fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20.0),
                   Row(
@@ -42,10 +42,10 @@ class SignUpPage extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           onTap: () {},
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                           decoration: InputDecoration(
                             hintText: 'First Name',
-                            hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                            hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                             filled: true,
                             fillColor: Colors.white, // Background color
                             focusedBorder: OutlineInputBorder(
@@ -65,10 +65,10 @@ class SignUpPage extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           onTap: () {},
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                           decoration: InputDecoration(
                             hintText: 'Last Name',
-                            hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                            hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                             filled: true,
                             fillColor: Colors.white, // Background color
                             focusedBorder: OutlineInputBorder(
@@ -92,10 +92,10 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(height: 10.0),
                   TextField(
                     onTap: () {},
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                     decoration: InputDecoration(
                       hintText: 'Phone Number',
-                      hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                      hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                       filled: true,
                       fillColor: Colors.white, // Background color
                       focusedBorder: OutlineInputBorder(
@@ -113,10 +113,10 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(height: 10.0),
                   TextField(
                     onTap: () {},
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                     decoration: InputDecoration(
                       hintText: 'Email',
-                      hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                      hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                       filled: true,
                       fillColor: Colors.white, // Background color
                       focusedBorder: OutlineInputBorder(
@@ -138,7 +138,7 @@ class SignUpPage extends StatelessWidget {
                         child: DropdownButtonFormField<String>(
                           decoration: InputDecoration(
                             hintText: 'Gender',
-                            hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                            hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                             filled: true,
                             fillColor: Colors.white, // Background color
                             focusedBorder: OutlineInputBorder(
@@ -155,7 +155,7 @@ class SignUpPage extends StatelessWidget {
                               .map((String value) {
                             return DropdownMenuItem<String>(
                               value: value,
-                              child: Text(value, style: TextStyle(color: Colors.black)),
+                              child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                             );
                           }).toList(),
                           onChanged: (String? newValue) {},
@@ -166,10 +166,10 @@ class SignUpPage extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           onTap: () {},
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                           decoration: InputDecoration(
                             hintText: 'Age',
-                            hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                            hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                             filled: true,
                             fillColor: Colors.white, // Background color
                             focusedBorder: OutlineInputBorder(
@@ -190,10 +190,10 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(height: 10.0),
                   TextField(
                     onTap: () {},
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                     decoration: InputDecoration(
                       hintText: 'Address',
-                      hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                      hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                       filled: true,
                       fillColor: Colors.white, // Background color
                       focusedBorder: OutlineInputBorder(
@@ -212,10 +212,10 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(height: 10.0),
                   TextField(
                     onTap: () {},
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                     decoration: InputDecoration(
                       hintText: 'Upload ID Card',
-                      hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                      hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                       filled: true,
                       fillColor: Colors.white, // Background color
                       focusedBorder: OutlineInputBorder(
@@ -234,7 +234,7 @@ class SignUpPage extends StatelessWidget {
                   DropdownButtonFormField<String>(
                     decoration: InputDecoration(
                       hintText: 'Select Car Type',
-                      hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                      hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                       filled: true,
                       fillColor: Colors.white, // Background color
                       focusedBorder: OutlineInputBorder(
@@ -251,7 +251,7 @@ class SignUpPage extends StatelessWidget {
                         .map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(value, style: TextStyle(color: Colors.black)),
+                        child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                       );
                     }).toList(),
                     onChanged: (String? newValue) {},
@@ -274,7 +274,7 @@ class SignUpPage extends StatelessWidget {
                     },
                     child: Text(
                       'SIGN UP',
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         color: Color.fromRGBO(0, 255, 202, 1),
                         fontSize: 16.0,
                       ),
@@ -286,7 +286,7 @@ class SignUpPage extends StatelessWidget {
                       Expanded(child: Divider()),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text('OR', style: TextStyle(color: Colors.white),),
+                        child: Text('OR', style: TextStyle(fontFamily: 'UberMove',color: Colors.white),),
                       ),
                       Expanded(child: Divider()),
                     ],
@@ -315,7 +315,7 @@ class SignUpPage extends StatelessWidget {
                         child: Text(
                           "Already have an account? ",
                           textAlign: TextAlign.center,
-                          style: TextStyle( color: Colors.white, fontSize: 16),
+                          style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 16),
                         ),
                       ),
                       InkWell(
@@ -329,7 +329,7 @@ class SignUpPage extends StatelessWidget {
                           "Login Here",
                           textAlign: TextAlign.center,
 
-                          style: TextStyle( color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                          style: TextStyle(fontFamily: 'UberMove', color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],

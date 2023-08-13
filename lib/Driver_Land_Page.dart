@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test/BookingAccepted.dart';
-import 'package:test/CurrentRide.dart';
-import 'package:test/DealsPage.dart';
-import 'package:test/Party_Land_Page.dart';
 import 'package:test/Profile_View.dart';
 import 'package:test/Switch_Confirmation.dart';
-
-import 'Book_RideP1.dart';
 import 'ChatPage.dart';
 import 'CustomerAccepted.dart';
-import 'DriverArrived.dart';
 import 'Rides_Ratings.dart';
 import 'Wallet.dart';
-import 'Wallet_2.dart';
 
 class Driver_Land_Page extends StatefulWidget {
   final String username;
@@ -64,7 +56,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                               Text.rich(
                                 TextSpan(
                                   text: 'Hello, ',
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: 'UberMove',
                                     fontSize: 25,
                                     color: Color.fromRGBO(10, 78, 105, 1),
                                     fontWeight: FontWeight.bold,
@@ -72,7 +64,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                                   children: <TextSpan>[
                                     TextSpan(
                                       text: widget.username, // Use widget.username here
-                                      style: TextStyle(
+                                      style: TextStyle(fontFamily: 'UberMove',
                                         fontSize: 25,
                                         fontWeight: FontWeight.normal,
                                       ),
@@ -94,7 +86,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                                 SizedBox(width: 5),
                                 Text(
                                   "4.2",
-                                  style: TextStyle(color: Colors.amber, fontSize: 18),
+                                  style: TextStyle(fontFamily: 'UberMove',color: Colors.amber, fontSize: 18),
                                 ),
                               ],
                             ),
@@ -105,7 +97,7 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Text(
                             "250 Ratings",
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               color: Color.fromRGBO(10, 77, 104, 1.0),
                               fontSize: 18,
                               fontWeight: FontWeight.w300,
@@ -120,20 +112,28 @@ class _DriverLandPageState extends State<Driver_Land_Page> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         SizedBox(height: 10),
-                        Transform.scale(
-                          scale: 0.8,
-                          child: Switch(
-                            value: _isSwitched,
-                            onChanged: (value) {
-                              setState(() {
-                                _isSwitched = value;
-                              });
-                            },
+                        Center(
+                          child: SwitchTheme(
+                            data: SwitchThemeData(
+                              thumbColor: MaterialStateProperty.all<Color>(
+                                  Color.fromRGBO(0, 255, 202, 1)),
+                              // inactiveTrackColor: Color.fromRGBO(202, 202, 202, 1),
+                              // inactiveThumbColor: Color.fromRGBO(232, 234, 233, 1),
+                              // activeColor: Colors.transparent,
+                            ),
+                            child: CustomSwitch(
+                              value: _isSwitched,
+                              onChanged: (value) {
+                                setState(() {
+                                  _isSwitched = value;
+                                });
+                              },
+                            ),
                           ),
                         ),
                         Text(
                           '${_isSwitched ? 'Available' : 'Unavailable'}',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontFamily: 'UberMove',fontSize: 18),
                         ),
                       ],
                     ),
@@ -284,7 +284,7 @@ class _OfferCardsState extends State<OfferCards> {
             Center(
               child: Text(
                 'New Driver Request',
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                   color: Color.fromRGBO(10, 77, 104, 1),
@@ -308,7 +308,7 @@ class _OfferCardsState extends State<OfferCards> {
                 ),
                 Text(
                   'John MacCanzie',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color.fromRGBO(10, 77, 104, 1),
@@ -319,7 +319,7 @@ class _OfferCardsState extends State<OfferCards> {
                 SizedBox(width: 5),
                 Text(
                   "4.2",
-                  style: TextStyle(color: Colors.amber, fontSize: 18),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.amber, fontSize: 18),
                 ),
               ],
             ),
@@ -334,7 +334,7 @@ class _OfferCardsState extends State<OfferCards> {
                     children: [
                       Text(
                         ' 102, NY, New York State, US',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -342,7 +342,7 @@ class _OfferCardsState extends State<OfferCards> {
                       ),
                       Text(
                         '  3 Persons',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -350,7 +350,7 @@ class _OfferCardsState extends State<OfferCards> {
                       ),
                       Text(
                         '  \$523',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -359,7 +359,7 @@ class _OfferCardsState extends State<OfferCards> {
                       SizedBox(height: 30,),
                       Text(
                         ' 120, NY, New York State, US',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -376,7 +376,7 @@ class _OfferCardsState extends State<OfferCards> {
               child: Text(
                 '\$245  Automatically Calculated',
                 textAlign: TextAlign.start,
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                   color: Color.fromRGBO(68, 222, 2, 1),
@@ -399,9 +399,74 @@ class _OfferCardsState extends State<OfferCards> {
                 },
                 child: Text(
                   'Accept Request',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomSwitch extends StatefulWidget {
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
+  const CustomSwitch({
+    Key? key,
+    required this.value,
+    required this.onChanged,
+  }) : super(key: key);
+
+  @override
+  _CustomSwitchState createState() => _CustomSwitchState();
+}
+
+class _CustomSwitchState extends State<CustomSwitch> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        widget.onChanged(!widget.value);
+      },
+      child: Container(
+        width: 80.0, // Adjust width as needed
+        height: 40.0, // Adjust height as needed
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          color: widget.value
+              ? Color.fromRGBO(8, 131, 149, 1)
+              : Color.fromRGBO(202, 202, 202, 1),
+        ),
+        child: Row(
+          mainAxisAlignment: widget.value
+              ? MainAxisAlignment.end
+              : MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(2),
+              child: Container(
+                width: 40.0,
+                height: 40.0,
+
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: widget.value ? Color.fromRGBO(0, 255, 202, 1) : Color.fromRGBO(232, 234, 233, 1),
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(
+
+                  )
+                ),
+                child: Text(
+                  widget.value ? 'Yes' : 'No',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

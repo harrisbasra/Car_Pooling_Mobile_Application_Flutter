@@ -15,7 +15,7 @@ class Switch_Confirm extends StatelessWidget {
               Expanded(child: SizedBox(height: 20)),
               Text(
                 "Switch to Driver mode?",
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -26,7 +26,7 @@ class Switch_Confirm extends StatelessWidget {
               Expanded(child: SizedBox(height: 10,)),
               Text(
                 "Select Licence Duration",
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontSize: 20,
                 ),
@@ -35,7 +35,7 @@ class Switch_Confirm extends StatelessWidget {
               DropdownButtonFormField<String>(
                 decoration: InputDecoration(
                   hintText: 'Select Duration',
-                  hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                  hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                   filled: true,
                   fillColor: Colors.white, // Background color
                   focusedBorder: OutlineInputBorder(
@@ -52,7 +52,7 @@ class Switch_Confirm extends StatelessWidget {
                     .map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
-                    child: Text(value, style: TextStyle(color: Colors.black)),
+                    child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                   );
                 }).toList(),
                 onChanged: (String? newValue) {},
@@ -61,10 +61,10 @@ class Switch_Confirm extends StatelessWidget {
               TextField(
                 readOnly: true,
                 onTap: () {},
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                 decoration: InputDecoration(
                   hintText: 'Upload Driving Licence',
-                  hintStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                  hintStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                   filled: true,
                   fillColor: Colors.white, // Background color
                   focusedBorder: OutlineInputBorder(
@@ -94,7 +94,7 @@ class Switch_Confirm extends StatelessWidget {
                 },
                 child: Text(
                   'Start Driving',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
                   ),

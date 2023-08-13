@@ -13,12 +13,12 @@ class Wallet extends StatelessWidget {
       appBar: AppBar(
 
         title: Text(
-          'Wallet',
+          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWallet',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -46,7 +46,7 @@ class Wallet extends StatelessWidget {
                     child: Text.rich(
                       TextSpan(
                         text: 'Hello',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 25,
                           color: Color.fromRGBO(10, 78, 105, 1),
                           fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class Wallet extends StatelessWidget {
                         children: <TextSpan>[
                           TextSpan(
                             text: ' $username',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               fontSize: 25,
                               fontWeight: FontWeight.normal,
                             ),
@@ -70,7 +70,7 @@ class Wallet extends StatelessWidget {
                 child: Text.rich(
                   TextSpan(
                     text: 'Your Available Balance: ',
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       fontSize: 20,
                       color: Color.fromRGBO(10, 78, 105, 1),
                       fontWeight: FontWeight.normal,
@@ -78,7 +78,7 @@ class Wallet extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text: '\t\t\t\t\t\t\t\t\t\$561.4',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -107,7 +107,7 @@ class Wallet extends StatelessWidget {
                         children: [
                           Text(
                             'Transfer to Bank',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
                             ),
@@ -136,7 +136,7 @@ class Wallet extends StatelessWidget {
                         children: [
                           Text(
                             'Add Money',
-                            style: TextStyle(
+                            style: TextStyle(fontFamily: 'UberMove',
                               color: Color.fromRGBO(10, 77, 104, 1),
                               fontSize: 15,
                             ),
@@ -152,7 +152,7 @@ class Wallet extends StatelessWidget {
               SizedBox(height: 25,),
               Text(
                 'Transactions: ',
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                   color: Color.fromRGBO(10, 77, 104, 1),
@@ -326,7 +326,7 @@ class _RideCardsState extends State<RideCards> {
                     left: 8.0, right: 8.0, top: 2, bottom: 2),
                 child: Text(
                   '\$${widget.offeredPrice.toStringAsFixed(2)}',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Colors.black,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,

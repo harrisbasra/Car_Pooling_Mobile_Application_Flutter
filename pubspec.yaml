@@ -32,4 +32,8 @@ flutter:
   assets:
     - assets/images/
 
-
+  fonts:
+    - family: UberMove
+      fonts:
+        - asset: fonts/UberMoveBold.otf
+        - asset: fonts/UberMoveMedium.otf

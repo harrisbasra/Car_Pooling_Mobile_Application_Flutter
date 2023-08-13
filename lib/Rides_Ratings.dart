@@ -16,10 +16,10 @@ class RideRatings extends StatelessWidget {
         title: Text(
           'Rides Ratings',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -207,14 +207,14 @@ class RatingCards extends StatelessWidget {
                   SizedBox(width: 5,),
                   Text(
                     '$driverRatings Stars', // Driver's ratings value
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
                     ),
                   ),
                   Expanded(child: SizedBox(width: 5,),),
                   Text(
                     '$price', // Price value
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       fontSize: 25,
                       color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
                       fontWeight: FontWeight.bold,
@@ -244,7 +244,7 @@ class RatingCards extends StatelessWidget {
                   Text(
                     '$driverName',
                     // Driver's name value
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       fontSize: 25,
 
                       color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
@@ -253,7 +253,7 @@ class RatingCards extends StatelessWidget {
                   Expanded(child: SizedBox(width: 10,),),
                   Text(
                     '$timeOfRide', // Time of ride value
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1), // RGB(10,77,104)
                     ),
                   ),

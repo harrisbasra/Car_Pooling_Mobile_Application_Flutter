@@ -20,10 +20,10 @@ class _SelectLocationState extends State<SelectLocation> {
         title: Text(
           'Select Location',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -62,7 +62,7 @@ class _SelectLocationState extends State<SelectLocation> {
                 },
                 child: Text(
                   'Select Location',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
                   ),

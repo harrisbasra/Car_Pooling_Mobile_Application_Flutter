@@ -15,10 +15,10 @@ class DriverNotFound extends StatelessWidget {
         title: Text(
           'Not Found',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -43,7 +43,7 @@ class DriverNotFound extends StatelessWidget {
               Image.asset("assets/images/FailedToFind.png", scale: 1.5,),
               Expanded(child: SizedBox(height: 10,)),Text(
                 "Sorry ! No Driver was Found :(",
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontWeight: FontWeight.bold,
                   fontSize: 24,

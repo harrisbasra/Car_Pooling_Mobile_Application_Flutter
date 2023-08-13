@@ -16,10 +16,10 @@ class CurrentRide extends StatelessWidget {
         title: Text(
           'Current Ride',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -40,7 +40,7 @@ class CurrentRide extends StatelessWidget {
           children: [
             Text(
               'Address',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 12),
             Row(
@@ -53,7 +53,7 @@ class CurrentRide extends StatelessWidget {
                     children: [
                       Text(
                         ' 102, NY, New York State, US',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -61,7 +61,7 @@ class CurrentRide extends StatelessWidget {
                       ),
                       Text(
                         '  3 Persons',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -69,7 +69,7 @@ class CurrentRide extends StatelessWidget {
                       ),
                       Text(
                         '  \$523',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: Color.fromRGBO(10, 77, 104, 1),
@@ -78,7 +78,7 @@ class CurrentRide extends StatelessWidget {
                       SizedBox(height: 30,),
                       Text(
                         ' 120, NY, New York State, US',
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'UberMove',
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1),

@@ -9,10 +9,10 @@ class Edit_Profile extends StatelessWidget {
         title: Text(
           'Edit Profile',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -56,9 +56,9 @@ class Edit_Profile extends StatelessWidget {
                 SizedBox(height: 30.0),
                 Row(
                   children: [
-                    Text("First Name", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
+                    Text("First Name", style: TextStyle(fontFamily: 'UberMove',fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
                     Expanded(child: SizedBox(width: 10,)),
-                    Text("Last Name", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
+                    Text("Last Name", style: TextStyle(fontFamily: 'UberMove',fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
                     Expanded(child: SizedBox(width: 10,)),
                   ],
                 ),
@@ -68,7 +68,7 @@ class Edit_Profile extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           labelText: 'First Name',
                           labelStyle:
@@ -92,7 +92,7 @@ class Edit_Profile extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           labelText: 'Last Name',
                           labelStyle:
@@ -119,7 +119,7 @@ class Edit_Profile extends StatelessWidget {
                     child: Text(
                       "Phone Number",
                       textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 15,
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1))
                       ,)
@@ -127,10 +127,10 @@ class Edit_Profile extends StatelessWidget {
 
                 TextField(
                   onTap: () {},
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
-                    labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                    labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                     filled: true,
                     fillColor: Colors.white, // Background color
                     focusedBorder: OutlineInputBorder(
@@ -150,7 +150,7 @@ class Edit_Profile extends StatelessWidget {
                     child: Text(
                       "Email",
                       textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 15,
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1))
                       ,)
@@ -158,10 +158,10 @@ class Edit_Profile extends StatelessWidget {
 
                 TextField(
                   onTap: () {},
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                    labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                     filled: true,
                     fillColor: Colors.white, // Background color
                     focusedBorder: OutlineInputBorder(
@@ -179,9 +179,9 @@ class Edit_Profile extends StatelessWidget {
                 SizedBox(height: 10.0),
                 Row(
                   children: [
-                    Text("Gender", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
+                    Text("Gender", style: TextStyle(fontFamily: 'UberMove',fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
                     Expanded(child: SizedBox(width: 10,)),
-                    Text("Age", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
+                    Text("Age", style: TextStyle(fontFamily: 'UberMove',fontSize: 15, fontWeight: FontWeight.w600,color: Color.fromRGBO(10, 77, 104, 1)),),
                     Expanded(child: SizedBox(width: 10,)),
                   ],
                 ),
@@ -210,7 +210,7 @@ class Edit_Profile extends StatelessWidget {
                             .map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value, style: TextStyle(color: Colors.black)),
+                            child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                           );
                         }).toList(),
                         onChanged: (String? newValue) {},
@@ -220,10 +220,10 @@ class Edit_Profile extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           labelText: 'Age',
-                          labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                          labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                           filled: true,
                           fillColor: Colors.white, // Background color
                           focusedBorder: OutlineInputBorder(
@@ -246,7 +246,7 @@ class Edit_Profile extends StatelessWidget {
                     child: Text(
                       "Address",
                       textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 15,
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1))
                       ,)
@@ -254,10 +254,10 @@ class Edit_Profile extends StatelessWidget {
 
                 TextField(
                   onTap: () {},
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                   decoration: InputDecoration(
                     labelText: 'Address',
-                    labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                    labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                     filled: true,
                     fillColor: Colors.white, // Background color
                     focusedBorder: OutlineInputBorder(
@@ -278,7 +278,7 @@ class Edit_Profile extends StatelessWidget {
                     child: Text(
                       "Upload ID Card",
                       textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 15,
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1))
                       ,)
@@ -288,10 +288,10 @@ class Edit_Profile extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         onTap: () {},
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                         decoration: InputDecoration(
                           labelText: 'Upload ID Card',
-                          labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                          labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                           filled: true,
                           fillColor: Colors.white, // Background color
                           focusedBorder: OutlineInputBorder(
@@ -315,7 +315,7 @@ class Edit_Profile extends StatelessWidget {
                     child: Text(
                       "Select Car Type",
                       textAlign: TextAlign.start,
-                      style: TextStyle(fontSize: 15,
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15,
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(10, 77, 104, 1))
                       ,)
@@ -323,7 +323,7 @@ class Edit_Profile extends StatelessWidget {
                 DropdownButtonFormField<String>(
                   decoration: InputDecoration(
                     labelText: 'Select Car Type',
-                    labelStyle: TextStyle(color: Color.fromRGBO(8, 131, 149, 1)),
+                    labelStyle: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(8, 131, 149, 1)),
                     filled: true,
                     fillColor: Colors.white, // Background color
                     focusedBorder: OutlineInputBorder(
@@ -341,7 +341,7 @@ class Edit_Profile extends StatelessWidget {
                       .map((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
-                      child: Text(value, style: TextStyle(color: Colors.black)),
+                      child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                     );
                   }).toList(),
                   onChanged: (String? newValue) {},
@@ -359,7 +359,7 @@ class Edit_Profile extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'Save',
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(0, 255, 202, 1),
                       fontSize: 16.0,
                     ),

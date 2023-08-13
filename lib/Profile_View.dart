@@ -41,7 +41,7 @@ class Profile_View extends StatelessWidget {
                   child: Text.rich(
                     TextSpan(
                       text: 'Hello, ',
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         fontSize: 25,
                         color: Color.fromRGBO(10, 78, 105, 1),
                         fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class Profile_View extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                           text: '\nMicheal',
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: 'UberMove',
                             fontSize: 30,
                             fontWeight: FontWeight.normal,
                           ),
@@ -73,7 +73,7 @@ class Profile_View extends StatelessWidget {
                           SizedBox(width: 5),
                           Text(
                             "4.2",
-                            style: TextStyle(color: Colors.amber, fontSize: 18),
+                            style: TextStyle(fontFamily: 'UberMove',color: Colors.amber, fontSize: 18),
                           ),
                         ],
                       ),
@@ -84,7 +84,7 @@ class Profile_View extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 8.0),
                     child: Text(
                       "250 Ratings",
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         color: Color.fromRGBO(10, 77, 104, 1.0),
                         fontSize: 18,
                         fontWeight: FontWeight.w300,
@@ -111,7 +111,7 @@ class Profile_View extends StatelessWidget {
                               SizedBox(width: 5),
                               Text(
                                 "Edit Profile",
-                                style: TextStyle(color: Color.fromRGBO(10, 77, 104, 1)),
+                                style: TextStyle(fontFamily: 'UberMove',color: Color.fromRGBO(10, 77, 104, 1)),
                               ),
                             ],
                           ),
@@ -135,7 +135,7 @@ class Profile_View extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     "\tEmail",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1.0),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -153,7 +153,7 @@ class Profile_View extends StatelessWidget {
                 child: Text(
                   "example@example.com",
                   textAlign: TextAlign.start,
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                 ),
               ),
             ),
@@ -166,7 +166,7 @@ class Profile_View extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     "\tPhone Number",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1.0),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -183,7 +183,7 @@ class Profile_View extends StatelessWidget {
                 child: Text(
                   "65465465461",
                   textAlign: TextAlign.start,
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                 ),
               ),
             ),
@@ -195,7 +195,7 @@ class Profile_View extends StatelessWidget {
                   children: [
                     Text(
                       "Age",
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         color: Color.fromRGBO(10, 77, 104, 1.0),
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -209,7 +209,7 @@ class Profile_View extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10),
                   child: Text(
                     "30",
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                   ),
                 ),
               ],
@@ -225,7 +225,7 @@ class Profile_View extends StatelessWidget {
                   children: [
                     Text(
                       "Gender",
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: 'UberMove',
                         color: Color.fromRGBO(10, 77, 104, 1.0),
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -239,7 +239,7 @@ class Profile_View extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
                     "Male",
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                   ),
                 ),],),
             ],),
@@ -252,7 +252,7 @@ class Profile_View extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     "Address",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1.0),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -270,7 +270,7 @@ class Profile_View extends StatelessWidget {
                   child: Text(
                     "4517 Washington Ave. Manchester, Kentucky 39495",
                     textAlign: TextAlign.start,
-                    style: TextStyle(color: Colors.black, fontSize: 20),
+                    style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                   ),
                 ),
               ),
@@ -284,7 +284,7 @@ class Profile_View extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     "Type of Car",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: 'UberMove',
                       color: Color.fromRGBO(10, 77, 104, 1.0),
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -301,7 +301,7 @@ class Profile_View extends StatelessWidget {
                 child: Text(
                   "Luxury Sedan",
                   textAlign: TextAlign.start,
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontSize: 20),
                 ),
               ),
             ),

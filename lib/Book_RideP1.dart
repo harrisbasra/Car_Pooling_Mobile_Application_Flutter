@@ -22,12 +22,12 @@ class _BookRide01State extends State<BookRide01> {
       appBar: AppBar(
 
         title: Text(
-          'Book Ride',
+          '\t\t\t\t\t\t\t\t\t\t\t\t\tBook Ride',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -52,7 +52,7 @@ class _BookRide01State extends State<BookRide01> {
             children: [
               Text(
                 'Address',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 8),
               Row(
@@ -69,10 +69,10 @@ class _BookRide01State extends State<BookRide01> {
                           ),
                           child: TextField(
                             onTap: () {},
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                             decoration: InputDecoration(
                               hintText: 'Pickup Address',
-                              hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w200),
+                              hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontWeight: FontWeight.w200),
                               enabledBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                               focusedBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                               suffixIcon: InkWell(
@@ -93,10 +93,10 @@ class _BookRide01State extends State<BookRide01> {
                           ),
                           child: TextField(
                             onTap: () {},
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                             decoration: InputDecoration(
                               hintText: 'Destination Address',
-                              hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.w200),
+                              hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black, fontWeight: FontWeight.w200),
                               enabledBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                               focusedBorder: UnderlineInputBorder(borderSide: BorderSide.none),
                               suffixIcon: InkWell(
@@ -117,7 +117,7 @@ class _BookRide01State extends State<BookRide01> {
               SizedBox(height: 25),
               Text(
                 'No. of People',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16),
               Container(
@@ -128,7 +128,7 @@ class _BookRide01State extends State<BookRide01> {
                 child:DropdownButtonFormField<String>(
                   decoration: InputDecoration(
                     hintText: 'Select No. of People',
-                    hintStyle: TextStyle(color: Colors.black),
+                    hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                     filled: true,
                     fillColor: Colors.grey[300], // Background color
                     focusedBorder: OutlineInputBorder(
@@ -145,7 +145,7 @@ class _BookRide01State extends State<BookRide01> {
                       .map((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
-                      child: Text(value, style: TextStyle(color: Colors.black)),
+                      child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                     );
                   }).toList(),
                   onChanged: (String? newValue) {},
@@ -153,7 +153,7 @@ class _BookRide01State extends State<BookRide01> {
               SizedBox(height: 25),
               Text(
                 'Pickup Time',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Row(
@@ -167,7 +167,7 @@ class _BookRide01State extends State<BookRide01> {
                       child: DropdownButtonFormField<String>(
                         decoration: InputDecoration(
                           hintText: 'Select Hours',
-                          hintStyle: TextStyle(color: Colors.black),
+                          hintStyle: TextStyle(fontFamily: 'UberMove',color: Colors.black),
                           filled: true,
                           fillColor: Colors.grey[300], // Background color
                           focusedBorder: OutlineInputBorder(
@@ -184,7 +184,7 @@ class _BookRide01State extends State<BookRide01> {
                             .map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value, style: TextStyle(color: Colors.black)),
+                            child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                           );
                         }).toList(),
                         onChanged: (String? newValue) {},
@@ -218,7 +218,7 @@ class _BookRide01State extends State<BookRide01> {
                             .map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value, style: TextStyle(color: Colors.black)),
+                            child: Text(value, style: TextStyle(fontFamily: 'UberMove',color: Colors.black)),
                           );
                         }).toList(),
                         onChanged: (String? newValue) {},
@@ -230,7 +230,7 @@ class _BookRide01State extends State<BookRide01> {
               SizedBox(height: 25),
               Text(
                 'Price',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontFamily: 'UberMove',fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10,),
               Center(
@@ -247,7 +247,7 @@ class _BookRide01State extends State<BookRide01> {
                         padding: const EdgeInsets.only(top: 5, bottom: 5),
                         child: Row(
                           children: [
-                            Text('Automatic Price Calculation <<< ', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w300),),
+                            Text('Automatic Price Calculation <<< ', style: TextStyle(fontFamily: 'UberMove',fontSize: 10, fontWeight: FontWeight.w300),),
                             Container(
                               width: 35,
                               height: 35,
@@ -259,7 +259,7 @@ class _BookRide01State extends State<BookRide01> {
                                 )
                               ),
                             ),
-                            Text(' >>> Let Driver suggest a price', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w300),),
+                            Text(' >>> Let Driver suggest a price', style: TextStyle(fontFamily: 'UberMove',fontSize: 10, fontWeight: FontWeight.w300),),
                           ],
                         ),
                       ),
@@ -267,7 +267,7 @@ class _BookRide01State extends State<BookRide01> {
                     SizedBox(height: 10),
                     Text(
                       _options[_sliderValue.round()],
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontFamily: 'UberMove',fontSize: 15),
                     ),
                   ],
                 ),
@@ -287,7 +287,7 @@ class _BookRide01State extends State<BookRide01> {
                 },
                 child: Text(
                   'Book Ride',
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: 'UberMove',
                     color: Color.fromRGBO(0, 255, 202, 1),
                     fontSize: 16.0,
                   ),

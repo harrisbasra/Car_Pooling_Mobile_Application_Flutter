@@ -13,12 +13,12 @@ class DriverArrived extends StatelessWidget {
       appBar: AppBar(
 
         title: Text(
-          'Arrived',
+          '\t\t\t\t\t\tArrived',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(fontFamily: 'UberMove',color: Colors.white, fontWeight: FontWeight.bold),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white,),
+          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white,),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -41,7 +41,7 @@ class DriverArrived extends StatelessWidget {
               Expanded(child: SizedBox(height: 20)),
               Text(
                 "Your Driver has Arrived",
-                style: TextStyle(
+                style: TextStyle(fontFamily: 'UberMove',
                   color: Color.fromRGBO(10, 77, 104, 1.0),
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
