@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test/Wallet.dart';
 
+import 'ChatPage.dart';
+import 'Rides_Ratings.dart';
+import 'Switch_Confirmation.dart';
+
 
 class FinishDriverJob extends StatelessWidget {
   @override
@@ -103,7 +107,7 @@ class FinishDriverJob extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade300,
+          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
         ),
         height: 80,
@@ -112,55 +116,79 @@ class FinishDriverJob extends StatelessWidget {
             SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(flex: 1, child: SizedBox(width: 10,)),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 5,),
-                    Icon(Icons.chat, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Text Goer', textAlign: TextAlign.center, ),
-                  ],
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 5,),
+                      Image.asset("assets/images/navchat.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Text Goer', textAlign: TextAlign.center, ),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
-                Column(
-                  children: [
-                    Icon(Icons.card_giftcard, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Deals'),
-                  ],
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => RideRatings()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_recent.png", scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Recent'),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
-                Column(
-                  children: [
-                    Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          // color: Color.fromRGBO(10, 77, 104, 1),
-                        ),
-                        child: Image.asset("assets/images/steering.png", height: 50, width: 50,)
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Switch_Confirm()));
+                  },
+                  child: Column(
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            // color: Color.fromRGBO(10, 77, 104, 1),
+                          ),
+                          child: Image.asset("assets/images/PartyJugs.png", height: 55, width: 55,)
 
-                      // Icon(
-                      //   Icons.drive_eta,
-                      //   size: 30,
-                      //   color: Colors.white,
-                      // ),
-                    ),
-                    Text('Driver mode', textAlign: TextAlign.center,),
-                  ],
+                        // Icon(
+                        //   Icons.drive_eta,
+                        //   size: 30,
+                        //   color: Colors.white,
+                        // ),
+                      ),
+                      Text('Party mode', textAlign: TextAlign.center,),
+                    ],
+                  ),
+                ),
+                Expanded(flex: 2, child: SizedBox(width: 10,)),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Wallet()));
+                  },
+                  child: Column(
+                    children: [
+                      Image.asset("assets/images/nav_wallet.png",scale: 2,),
+                      SizedBox(height: 10,),
+                      Text('Wallet'),
+                    ],
+                  ),
                 ),
                 Expanded(flex: 2, child: SizedBox(width: 10,)),
                 Column(
                   children: [
-                    Icon(Icons.account_balance_wallet, color: Color.fromRGBO(10, 77, 104, 1),),
-                    Text('Wallet'),
-                  ],
-                ),
-                Expanded(flex: 2, child: SizedBox(width: 10,)),
-                Column(
-                  children: [
-                    Icon(Icons.menu, color: Color.fromRGBO(10, 77, 104, 1),),
+                    Image.asset("assets/images/nav_menu.png", scale: 2,),
+                    SizedBox(height: 10,),
                     Text('Menu'),
                   ],
                 ),

@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:test/CustomerAccepted.dart';
+import 'package:test/DriverArrived.dart';
+import 'package:test/DriverNotFound.dart';
+import 'package:test/FinishDriverJob.dart';
 import 'package:test/splash_screen00.dart';
+import 'BookingAccepted.dart';
+import 'FinishRide.dart';
+import 'TestingPage.dart';
 import 'firebase_options.dart';
 import 'dart:io';
 import 'dart:convert';
@@ -30,8 +37,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
-      // home: CartPage(),
+      home: TestingPage(),
+   // home: SplashScreen(),
     );
   }
 }
